@@ -2,7 +2,7 @@
 .venv/
 
 
-Data/raw/transactions/
+Data/raw/
 Data/Processed/
 #potential future ignores
 __pycache__/
