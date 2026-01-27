@@ -1,6 +1,9 @@
 # Python virtual environment
 .venv/
 
+
+Data/raw/transactions/
+Data/Processed/
 #potential future ignores
 __pycache__/
 *.pyc
