@@ -1,0 +1,169 @@
+industry_code,industry
+0112,Cattle Farms
+0119,Livestock Combination Farms
+0139,Other Field Crop Farms
+0141,Field Crop Combination Farms
+0171,"Livestock, Field Crop and Horticultural Combination Farms"
+0211,Veterinary Services
+0219,Other Services Incidental to Livestock and Animal Specialties
+0311,Salt Water Fishing Industry
+0411,Logging Industry (Except Contract Logging)
+0511,Forestry Services Industry
+0711,Conventional Crude Oil and Natural Gas Industry
+0919,Other Service Industries Incidental to Crude Petroleum and Natural Gas
+1099,Other Food Products Industries n.e.c.
+2499,Other Clothing and Apparel Industries n.e.c.
+2819,Other Commercial Printing Industries
+2839,Other Publishing Industries
+3081,Machine Shop Industry
+3099,Other Metal Fabricating Industries n.e.c.
+3192,Construction and Mining Machinery and Materials Handling Equipment Industry
+3199,Other Machinery and Equipment Industries n.e.c.
+3999,Other Manufactured Products Industries n.e.c.
+4011,Single Family Housing
+4013,Residential Renovation
+4021,Manufacturing and Light Industrial Building
+4022,Commercial Building
+4112,"Gas, Oil and Other Energy Related Structures (Except Pipelines)"
+4113,Gas and Oil Pipelines
+4129,Other Heavy Construction
+4214,Excavating and Grading
+4219,Other Site Work
+4224,Concrete Pouring and Finishing
+4226,Rough and Framing Carpentry
+4229,Other Structural and Related Work
+4231,Masonry Work
+4232,Siding Work
+4233,Glass and Glazing Work
+4235,Roof Shingling
+4239,Other Exterior Close-In Work
+4241,Plumbing
+4261,Electrical Work
+4272,Drywall Work
+4274,Finish Carpentry
+4275,Painting and Decorating Work
+4276,Terrazzo and Tile Work
+4278,Resilient Flooring and Carpet Work
+4279,Other Interior and Finishing Work
+4299,Other Trade Work n.e.c.
+4411,"Project Management, Construction"
+4491,Land Developers
+4499,Other Services Incidental to Construction n.e.c.
+4561,General Freight Trucking Industry
+4564,Dry Bulk Materials Trucking Industry
+4565,Forest Products Trucking Industry
+4569,Other Truck Transport Industries
+4581,Taxicab Industry
+4589,Other Transportation Industries n.e.c.
+4599,Other Service Industries Incidental to Transportation n.e.c.
+4799,Other Storage and Warehousing Industries n.e.c.
+4839,Other Telecommunication Industries
+4842,Courier Service Industry
+4999,Other Utility Industries n.e.c.
+5219,"Other Foods, Wholesale"
+5319,"Other Apparel, Wholesale"
+5511,"Automobiles, Wholesale"
+5639,"Other Building Materials, Wholesale"
+5981,"General Merchandise, Wholesale"
+5999,"Other Products n.e.c., Wholesale"
+6011,Food (Groceries) Stores
+6012,Food (Specialty) Stores
+6031,Pharmacies
+6032,Patent Medicine and Toiletries Stores
+6131,Women's Clothing Stores
+6239,Other Household Furnishings Stores
+6311,Automobile (New) Dealers
+6312,Automobile (Used) Dealers
+6331,Gasoline Service Stations
+6342,"Tire, Battery, Parts and Accessories Stores"
+6351,Garages (General Repairs)
+6352,Paint and Body Repair Shops
+6359,Other Motor Vehicle Repair Shops
+6391,Car Washes
+6399,Other Motor Vehicle Services n.e.c.
+6412,General Stores
+6413,Other General Merchandise Stores
+6521,Florist Shops
+6541,Sporting Goods Stores
+6561,Jewellery Stores
+6582,"Gift, Novelty and Souvenir Stores"
+6596,Pet Stores
+6599,Other Retail Stores n.e.c.
+6921,Direct Sellers
+7214,Investment Companies
+7215,Holding Companies
+7292,"Estate, Trust and Agency Funds"
+7421,Mortgage Brokers
+7511,Operators of Residential Buildings and Dwellings
+7512,Operators of Non-Residential Buildings
+7599,Other Real Estate Operators
+7611,Insurance and Real Estate Agencies
+7711,Employment Agencies
+7712,Personnel Suppliers
+7721,Computer Services
+7722,Computer Equipment Maintenance and Repair
+7731,Offices of Chartered and Certified Accountants
+7739,Other Accounting and Bookkeeping Services
+7741,Advertising Agencies
+7742,Media Representatives
+7749,Other Advertising Services
+7751,Offices of Architects
+7752,Offices of Engineers
+7759,Other Scientific and Technical Services
+7761,Offices of Lawyers and Notaries
+7771,Management Consulting Services
+7791,Security and Investigation Services
+7799,Other Business Services n.e.c.
+8132,Immigration Services
+8511,Elementary and Secondary Education
+8599,Other Educational Services
+8635,Public Health Clinics Community Health Centres
+8639,Other Non-Institutional Health Services
+8641,Child Day-Care and Nursery School Services
+8649,Other Non-Institutional Social Services
+8651,"Offices of Physicians, General Practice"
+8652,"Offices of Physicians and Surgeons, Specialists"
+8653,"Offices of Dentists, General Practice"
+8654,"Offices of Dentists, Specialists"
+8661,Offices of Chiropractors and Osteopaths
+8665,Offices of Physiotherapists-Occupational Therapists
+8666,Offices of Optometrists
+8669,Offices of Other Health Practitioners
+8671,Offices of Psychologists
+8699,Other Health and Social Service Associations and Agencies
+9114,Guest Houses and Tourist Homes
+9211,"Restaurants, Licensed"
+9212,"Restaurants, Unlicensed (including Drive-Ins)"
+9213,Take-Out Food Services
+9214,Caterers
+9611,Motion Picture and Video Production
+9631,Entertainment Production Companies and Artists
+9639,Other Theatrical and Staged Entertainment Services
+9641,Professional Sports Clubs
+9659,Other Sports and Recreation Clubs
+9699,Other Amusement and Recreational Services n.e.c.
+9711,Barber Shops
+9712,Beauty Shops
+9713,Combination Barber and Beauty shops
+9726,Carpet Cleaning
+9741,Private Households
+9799,Other Personal and Household Services n.e.c.
+9811,Religious Organizations
+9821,Business Associations
+9839,Other Professional Menbership Associations
+9841,Labour Organizations
+9851,Political Organizations
+9861,Civic and Fraternal Organizations
+9931,Photographers
+9942,Welding
+9949,Other Repair Services n.e.c.
+9953,Janitorial Services
+9959,Other Services to Buildings and Dwellings
+9999,Other Services n.e.c.
+2542,Wooden Kitchen Cabinet and Bathroom Vanity Industry
+5799,"Other Machinery, Equipment and Supplies n.e.c., Wholesale"
+7499,Other Financial Intermediaries n.e.c.
+8629,Other Institutional Health and Social Services n.e.c.
+8633,Health Rehabilitation Clinics
+9111,Hotels and Motor Hotels
+9962,Tour Wholesalers and Operators

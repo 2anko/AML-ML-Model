@@ -1,0 +1,98 @@
+occupation_code,occupation_title
+0,Legislative and senior management occupations
+10010,Financial managers
+10011,Human resources managers
+10019,Other administrative services managers
+10029,Other business services managers
+11100,Financial auditors and accountants
+11101,Financial and investment analysts
+11102,Financial advisors
+11201,Professional occupations in business management consulting
+11202,"Professional occupations in advertising, marketing and public relations"
+12010,"Supervisors, general office and administrative support workers"
+131,Administrative occupations
+13100,Administrative officers
+13111,Legal administrative assistants
+14100,General office support workers
+14101,Receptionists
+14102,Personnel clerks
+14200,Accounting and related clerks
+14201,"Banking, insurance and other financial clerks"
+14402,Production logistics workers
+20011,Architecture and science managers
+20012,Computer and information systems managers
+21222,Information systems specialists
+21232,Software developers and programmers
+21300,Civil engineers
+21301,Mechanical engineers
+21310,Electrical and electronics engineers
+21321,Industrial and manufacturing engineers
+21399,Other professional engineers
+2222,Technical occupations in computer and information systems
+22220,Computer network and web technicians
+22221,User support technicians
+22301,Mechanical engineering technologists and technicians
+30010,Managers in health care
+31102,General practitioners and family physicians
+31202,Physiotherapists
+31209,Other professional occupations in health diagnosing and treating
+313,Nursing and allied health professionals
+3211,Technical occupations in dental health care
+32124,Pharmacy technicians
+33102,"Nurse aides, orderlies and patient service associates"
+33109,Other assisting occupations in support of health services
+4001,Managers in public administration
+41101,Lawyers and Quebec notaries
+412,Professional occupations in education services
+41200,University professors and lecturers
+41220,Secondary school teachers
+41221,Elementary school and kindergarten teachers
+4130,Social and community service professionals
+42100,Police officers (except commissioned)
+42101,Firefighters
+42202,Early childhood educators and assistants
+44100,Home child care providers
+44101,"Home support workers, caregivers and related occupations"
+52120,Graphic designers and illustrators
+6,Sales and service occupations
+60010,Corporate sales managers
+60030,Restaurant and food service managers
+6004,Managers in customer and personal services
+62024,Cleaning supervisors
+62100,Technical sales specialists - wholesale trade
+62200,Chefs
+63100,Insurance agents and brokers
+63101,Real estate agents and salespersons
+63200,Cooks
+63202,Bakers
+63210,Hairstylists and barbers
+641,Retail salespersons and non-technical wholesale trade sales and account representatives
+64409,Other customer and information services representatives
+64410,Security guards and related security service occupations
+6510,Cashiers and other sales support occupations
+65100,Cashiers
+65102,"Store shelf stockers, clerks and order fillers"
+65200,Food and beverage servers
+65201,"Food counter attendants, kitchen helpers and related support occupations"
+6531,Cleaners
+70010,Construction managers
+7201,"Contractors and supervisors, technical industrial, electrical and construction trades and related workers"
+72106,Welders and related machine operators
+72200,Electricians (except industrial and power system)
+7230,"Plumbers, pipefitters and gas fitters"
+72310,Carpenters
+72410,"Automotive service technicians, truck and bus mechanics and mechanical repairers"
+73112,Painters and decorators (except interior decorators)
+73300,Transport truck drivers
+73301,"Bus drivers, subway operators and other transit operators"
+7410,Mail and message distribution occupations
+74102,Couriers and messengers
+75110,Construction trades helpers and labourers
+75200,Taxi and limousine drivers and chauffeurs
+831,Occupations in natural resources and fisheries
+85110,Mine labourers
+90010,Manufacturing managers
+920,"Supervisors, processing, manufacturing, assembly and fabrication occupations"
+9201,"Supervisors, processing and manufacturing occupations"
+942,Assemblers and inspectors in manufacturing
+95109,"Other labourers in processing, manufacturing and utilities"
