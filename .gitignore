@@ -1,9 +1,10 @@
 # Python virtual environment
 .venv/
 
-
+#Data set too large for github
 Data/raw/
 Data/Processed/
+
 #potential future ignores
 __pycache__/
 *.pyc
