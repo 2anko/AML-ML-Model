@@ -1,0 +1,23 @@
+{
+  "model_name": "logreg_baseline",
+  "timestamp_utc": "2026-02-03T18:27:47.073651+00:00",
+  "n_train": 700,
+  "n_valid": 150,
+  "pos_rate_train": 0.01,
+  "pos_rate_valid": 0.013333333333333334,
+  "n_features_input": 88,
+  "n_numeric_cols": 78,
+  "n_categorical_cols": 10,
+  "dropped_datetime_cols": [
+    "birth_date",
+    "onboard_date",
+    "established_date"
+  ],
+  "valid_pr_auc": 0.10680272108843537,
+  "valid_roc_auc": 0.4966216216216216,
+  "best_threshold": 0.12958627506525924,
+  "best_f1_valid": NaN,
+  "recall_at_50": 0.5,
+  "recall_at_100": 0.5,
+  "recall_at_200": 1.0
+}

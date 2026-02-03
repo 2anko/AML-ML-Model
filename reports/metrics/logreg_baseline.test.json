@@ -1,0 +1,53 @@
+{
+  "model_name": "logreg_baseline",
+  "split": "test",
+  "n": 150,
+  "pos_rate": 0.006666666666666667,
+  "threshold_used": 0.12958627506525924,
+  "pr_auc": 0.011904761904761904,
+  "roc_auc": 0.4429530201342282,
+  "recall_at_10": 0.0,
+  "recall_at_50": 0.0,
+  "recall_at_100": 1.0,
+  "recall_at_200": 1.0,
+  "precision_at_10": 0.0,
+  "precision_at_50": 0.0,
+  "precision_at_100": 0.01,
+  "precision_at_200": 0.006666666666666667,
+  "positive_rank": [
+    84
+  ],
+  "confusion_matrix": {
+    "tn": 142,
+    "fp": 7,
+    "fn": 1,
+    "tp": 0
+  },
+  "classification_report": {
+    "0": {
+      "precision": 0.993006993006993,
+      "recall": 0.9530201342281879,
+      "f1-score": 0.9726027397260274,
+      "support": 149.0
+    },
+    "1": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 1.0
+    },
+    "accuracy": 0.9466666666666667,
+    "macro avg": {
+      "precision": 0.4965034965034965,
+      "recall": 0.47651006711409394,
+      "f1-score": 0.4863013698630137,
+      "support": 150.0
+    },
+    "weighted avg": {
+      "precision": 0.9863869463869465,
+      "recall": 0.9466666666666667,
+      "f1-score": 0.9661187214611873,
+      "support": 150.0
+    }
+  }
+}

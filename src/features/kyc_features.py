@@ -1,7 +1,5 @@
 import pandas as pd
 
-import pandas as pd
-
 
 def build_kyc(kyc_indiv_path, kyc_sb_path, occ_codes_path=None, ind_codes_path=None):
     ind = pd.read_csv(kyc_indiv_path)
