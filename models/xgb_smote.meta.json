@@ -1,8 +1,9 @@
 {
-  "model_name": "logreg_baseline",
-  "timestamp_utc": "2026-05-04T19:36:02.661826+00:00",
+  "model_name": "xgb_smote",
+  "timestamp_utc": "2026-05-04T18:11:52.133140+00:00",
   "n_train": 700,
   "n_valid": 150,
+  "n_train_after_smote": 1386,
   "pos_rate_train": 0.01,
   "pos_rate_valid": 0.013333333333333334,
   "n_features_input": 94,
@@ -13,11 +14,10 @@
     "onboard_date",
     "established_date"
   ],
-  "valid_pr_auc": 0.07809523809523809,
-  "valid_roc_auc": 0.4797297297297297,
-  "best_threshold": 0.051823314196161284,
-  "best_f1_valid": NaN,
-  "recall_at_50": 0.5,
-  "recall_at_100": 0.5,
+  "valid_pr_auc": 0.02261904761904762,
+  "valid_roc_auc": 0.570945945945946,
+  "best_threshold": 0.0073900786228477955,
+  "recall_at_50": 0.0,
+  "recall_at_100": 1.0,
   "recall_at_200": 1.0
 }

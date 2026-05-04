@@ -4,23 +4,32 @@ End-to-end AML training pipeline.
 Stages (run in order by default):
   1. build   – join raw data into a single feature table
   2. split   – stratified 70/15/15 train/valid/test split
-  3. train   – fit logistic regression baseline
+  3. train   – fit the selected model
   4. eval    – evaluate on validation and test sets
 
+Models:
+  baseline   – logistic regression (default)
+  xgb        – XGBoost + SMOTE
+
 Usage:
-  python -m src.train                        # run all stages
-  python -m src.train --skip-build           # skip data build (table already exists)
-  python -m src.train --stages train eval    # run specific stages only
+  python -m src.train                            # logistic regression, all stages
+  python -m src.train --model xgb               # XGBoost + SMOTE, all stages
+  python -m src.train --model xgb --skip-build  # skip data build
+  python -m src.train --stages train eval        # run specific stages only
 """
 
 import argparse
 import time
 
 from src.data import build_table, make_splits
-from src.model import train_baseline, evaluate
+from src.model import train_baseline, train_xgb, evaluate
 
 
 ALL_STAGES = ["build", "split", "train", "eval"]
+MODELS = {
+    "baseline": (train_baseline.main, "logreg_baseline"),
+    "xgb":      (train_xgb.main,      "xgb_smote"),
+}
 
 
 def run_stage(name: str, fn, *args, **kwargs):
@@ -49,9 +58,15 @@ def main():
         help="Skip the 'build' stage (feature table already exists)",
     )
     parser.add_argument(
+        "--model",
+        choices=list(MODELS.keys()),
+        default="baseline",
+        help="Model to train: 'baseline' (logistic regression) or 'xgb' (XGBoost + SMOTE). Default: baseline",
+    )
+    parser.add_argument(
         "--model-name",
-        default="logreg_baseline",
-        help="Model artifact name (default: logreg_baseline)",
+        default=None,
+        help="Override the saved artifact name (default: derived from --model)",
     )
     parser.add_argument(
         "--seed",
@@ -60,6 +75,9 @@ def main():
         help="Random seed for splits and training (default: 42)",
     )
     args = parser.parse_args()
+
+    train_fn, default_model_name = MODELS[args.model]
+    model_name = args.model_name or default_model_name
 
     stages = args.stages
     if args.skip_build and "build" in stages:
@@ -74,11 +92,11 @@ def main():
         run_stage("split", make_splits.main, seed=args.seed)
 
     if "train" in stages:
-        run_stage("train", train_baseline.main, model_name=args.model_name, seed=args.seed)
+        run_stage(f"train ({args.model})", train_fn, model_name=model_name, seed=args.seed)
 
     if "eval" in stages:
-        run_stage("eval (valid)", evaluate.main, model_name=args.model_name, split="valid")
-        run_stage("eval (test)", evaluate.main, model_name=args.model_name, split="test")
+        run_stage("eval (valid)", evaluate.main, model_name=model_name, split="valid")
+        run_stage("eval (test)", evaluate.main, model_name=model_name, split="test")
 
     print(f"\n{'='*60}")
     print(f"  PIPELINE COMPLETE  ({time.time() - t_total:.1f}s total)")

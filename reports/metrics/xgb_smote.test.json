@@ -1,0 +1,53 @@
+{
+  "model_name": "xgb_smote",
+  "split": "test",
+  "n": 150,
+  "pos_rate": 0.006666666666666667,
+  "threshold_used": 0.0073900786228477955,
+  "pr_auc": 0.011363636363636364,
+  "roc_auc": 0.4161073825503355,
+  "recall_at_10": 0.0,
+  "recall_at_50": 0.0,
+  "recall_at_100": 1.0,
+  "recall_at_200": 1.0,
+  "precision_at_10": 0.0,
+  "precision_at_50": 0.0,
+  "precision_at_100": 0.01,
+  "precision_at_200": 0.006666666666666667,
+  "positive_rank": [
+    88
+  ],
+  "confusion_matrix": {
+    "tn": 135,
+    "fp": 14,
+    "fn": 1,
+    "tp": 0
+  },
+  "classification_report": {
+    "0": {
+      "precision": 0.9926470588235294,
+      "recall": 0.9060402684563759,
+      "f1-score": 0.9473684210526315,
+      "support": 149.0
+    },
+    "1": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 1.0
+    },
+    "accuracy": 0.9,
+    "macro avg": {
+      "precision": 0.4963235294117647,
+      "recall": 0.45302013422818793,
+      "f1-score": 0.47368421052631576,
+      "support": 150.0
+    },
+    "weighted avg": {
+      "precision": 0.9860294117647059,
+      "recall": 0.9,
+      "f1-score": 0.9410526315789474,
+      "support": 150.0
+    }
+  }
+}
