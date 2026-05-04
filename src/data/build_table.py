@@ -52,9 +52,11 @@ def main():
         if code_col in table.columns:
             table[code_col] = table[code_col].astype("string")
 
-    # age_years is only meaningful for individuals; leave NaN for businesses so
-    # the sklearn imputer uses the median of real ages rather than treating 0 as a value.
-    KEEP_NAN_NUMERIC = {"age_years"}
+    # Leave these as NaN so sklearn median-imputes them rather than treating 0 as a value:
+    #   age_years                  — not meaningful for businesses (no birth_date)
+    #   account_tenure_days        — missing when onboard_date is absent
+    #   days_established_to_onboard — missing when onboard_date is absent
+    KEEP_NAN_NUMERIC = {"age_years", "account_tenure_days", "days_established_to_onboard"}
 
     for col in table.columns:
         if col in KEEP_NAN_NUMERIC:
