@@ -52,11 +52,16 @@ def main():
         if code_col in table.columns:
             table[code_col] = table[code_col].astype("string")
 
+    # age_years is only meaningful for individuals; leave NaN for businesses so
+    # the sklearn imputer uses the median of real ages rather than treating 0 as a value.
+    KEEP_NAN_NUMERIC = {"age_years"}
+
     for col in table.columns:
+        if col in KEEP_NAN_NUMERIC:
+            continue
         if is_numeric_dtype(table[col]) or is_bool_dtype(table[col]):
             table[col] = table[col].fillna(0)
         elif is_datetime64_any_dtype(table[col]):
-            # keep NaT (don’t fill dates with 0)
             pass
         else:
             # categorical/text columns

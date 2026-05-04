@@ -136,6 +136,10 @@ def main(model_name: str = "logreg_baseline", seed: int = 42):
     X_train_df = train_df.drop(columns=["label"])
     X_valid_df = valid_df.drop(columns=["label"])
 
+    print("FEATURE COLUMNS USED (raw):")
+    print(list(X_train_df.columns))
+    print("Count:", X_train_df.shape[1])
+
     # Drop datetime columns (baseline approach)
     numeric_cols, cat_cols, dt_cols = infer_column_types(X_train_df)
     if dt_cols:
@@ -184,6 +188,25 @@ def main(model_name: str = "logreg_baseline", seed: int = 42):
 
     # Fit
     pipe.fit(X_train_df, y_train)
+
+    feature_names = pipe.named_steps["preprocess"].get_feature_names_out()
+    print("TRANSFORMED FEATURE COUNT:", len(feature_names))
+    print("First 50 transformed features:")
+    print(feature_names[:50])
+
+    feature_names = pipe.named_steps["preprocess"].get_feature_names_out()
+    coefs = pipe.named_steps["model"].coef_.ravel()
+
+    top_pos = np.argsort(coefs)[-20:][::-1]
+    top_neg = np.argsort(coefs)[:20]
+
+    print("\nTop +risk features:")
+    for i in top_pos:
+        print(feature_names[i], coefs[i])
+
+    print("\nTop -risk features:")
+    for i in top_neg:
+        print(feature_names[i], coefs[i])
 
     # Validate
     valid_scores = pipe.predict_proba(X_valid_df)[:, 1]

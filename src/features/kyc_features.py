@@ -1,4 +1,15 @@
+import numpy as np
 import pandas as pd
+
+TODAY = pd.Timestamp("today").normalize()
+
+# Flag suspicious income for low-employment occupations.
+# $50k+ while unemployed or a student warrants scrutiny.
+_HIGH_INCOME_THRESHOLD = 50_000
+_LOW_EMPLOYMENT_OCCUPATIONS = {"UNEMPLOYED", "STUDENT"}
+
+# Shell company indicator: business onboarded within this many days of founding.
+_NEW_BUSINESS_ONBOARD_DAYS = 90
 
 
 def build_kyc(kyc_indiv_path, kyc_sb_path, occ_codes_path=None, ind_codes_path=None):
@@ -8,13 +19,37 @@ def build_kyc(kyc_indiv_path, kyc_sb_path, occ_codes_path=None, ind_codes_path=N
     ind["customer_type"] = "individual"
     sb["customer_type"] = "smallbusiness"
 
+    # ── Individual features ───────────────────────────────────────────────────
     ind["birth_date"] = pd.to_datetime(ind["birth_date"], errors="coerce")
     ind["onboard_date"] = pd.to_datetime(ind["onboard_date"], errors="coerce")
-    ind["age_years"] = (pd.Timestamp("today") - ind["birth_date"]).dt.days / 365.25
+    ind["age_years"] = (TODAY - ind["birth_date"]).dt.days / 365.25
+    ind["account_tenure_days"] = (TODAY - ind["onboard_date"]).dt.days
+    ind["is_individual"] = 1
 
+    # Suspicious if unemployed/student but reports high income
+    occ_upper = ind["occupation_code"].astype("string").str.upper().str.strip()
+    ind["income_occupation_flag"] = (
+        occ_upper.isin(_LOW_EMPLOYMENT_OCCUPATIONS) & (ind["income"] > _HIGH_INCOME_THRESHOLD)
+    ).astype(int)
+
+    # ── Small business features ───────────────────────────────────────────────
     sb["established_date"] = pd.to_datetime(sb["established_date"], errors="coerce")
     sb["onboard_date"] = pd.to_datetime(sb["onboard_date"], errors="coerce")
+    sb["account_tenure_days"] = (TODAY - sb["onboard_date"]).dt.days
+    sb["is_individual"] = 0
 
+    # How old was the business when it opened its account (shell company signal)
+    sb["days_established_to_onboard"] = (
+        sb["onboard_date"] - sb["established_date"]
+    ).dt.days
+    sb["business_age_days"] = (TODAY - sb["established_date"]).dt.days
+
+    # Revenue efficiency — extremely high or zero revenue per headcount is suspicious
+    sb["revenue_per_employee"] = (
+        sb["sales"] / sb["employee_count"].replace(0, np.nan)
+    ).fillna(0)
+
+    # ── Reference code lookups ────────────────────────────────────────────────
     if occ_codes_path:
         occ = pd.read_csv(occ_codes_path, dtype={"occupation_code": "string"})
         ind["occupation_code"] = ind["occupation_code"].astype("string").str.strip()
